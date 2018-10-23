@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-	root to: 'application#landing'
-  end
-
+  root to: 'application#landing'
+end
