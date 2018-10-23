@@ -1,0 +1,20 @@
+
+<% if current_page?(about_us_path) %>
+<%= link_to "Main Page", root_path %>
+<%= link_to "Help", help_path %>
+<%= link_to "Rules", rules_path %>
+
+<% elsif current_page?(help_path) %>
+<%= link_to "Main Page", root_path %>
+<%= link_to "About us", about_us_path %>
+<%= link_to "Rules", rules_path %>
+<% elsif current_page?(rules_path) %>
+<%= link_to "Main Page", root_path %>
+<%= link_to "About us", about_us_path %>
+<%= link_to "Help", help_path %>
+<% elsif current_page?(root_path) %>
+<%= link_to "About us", about_us_path %>
+<%= link_to "Help", help_path %>
+<%= link_to "Rules", rules_path %>
+
+<% end %>
