@@ -1,0 +1,26 @@
+ <% @user_informations.each do |ui| %>
+    <br>
+    <%= ui.first_name %>
+    <br>
+    <%= ui.last_name %>
+    <br>
+    <%= ui.birthday %>
+    <br>
+    <%= ui.gender %>
+    <br>
+    <%= ui.childrens %>
+    <br>
+    <tr>
+    <td><%= link_to 'Show', ui, { type:"button", class:"btn btn-secondary" } %></td>
+    <td><%= link_to 'Edit', edit_user_information_path(ui), { type:"button", class:"btn btn-secondary" } %></td>
+    <td><%= link_to 'Destroy', ui, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+     </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Information', new_user_information_path, { type:"button", class:"btn btn-success" } %>
+<br>
+<%= link_to 'Main Page', root_path, { type:"button", class:"btn btn-primary" }%>

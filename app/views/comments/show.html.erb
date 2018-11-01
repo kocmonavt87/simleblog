@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<br>
+<%= @comment.title%>
+<%=@comment.description%>
+<p>
+</p>
+<%= link_to 'Edit', edit_comment_path(@comment), { type:"button", class:"btn btn-info" } %>
+<%= link_to 'Back', comments_path, { type:"button", class:"btn btn-info" } %>
+<%= link_to 'Destroy', @comment, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+

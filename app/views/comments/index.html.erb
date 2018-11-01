@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+    <%= comment.title %>
+    <p>
+    </p>
+    <%= comment.description%>
+    <p>
+    </p>
+      <tr>
+        <td><%= link_to 'Show', comment, { type:"button", class:"btn btn-info" } %></td>
+        <td><%= link_to 'Edit', edit_comment_path(comment), { type:"button", class:"btn btn-info" } %></td>
+        <td><%= link_to 'Destroy', comment, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comment', new_comment_path, { type:"button", class:"btn btn-success" } %>
+<br>
+<%= link_to 'Main Page', root_path, { type:"button", class:"btn btn-primary" } %>

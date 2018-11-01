@@ -1,4 +1,4 @@
-<%= link_to "Main Page", root_path, style: "#{'display:none' if request.fullpath == root_path }" %>
-<%= link_to "Help", help_path,  style: "#{'display:none' if request.fullpath == help_path }"  %>
-<%= link_to "About us", about_us_path,  style: "#{'display:none' if request.fullpath == about_us_path }"%>
-<%= link_to "Rules", rules_path,  style: "#{'display:none' if request.fullpath == rules_path }"  %>
+<%= link_to "Main Page", root_path, class:"btn btn-light", style: "#{'display:none' if request.fullpath == root_path }" %>
+<%= link_to "Help", help_path, class:"btn btn-light", style: "#{'display:none' if request.fullpath == help_path }"  %>
+<%= link_to "About us", about_us_path, class:"btn btn-light", style: "#{'display:none' if request.fullpath == about_us_path }"%>
+<%= link_to "Rules", rules_path, class:"btn btn-light", style: "#{'display:none' if request.fullpath == rules_path }"  %>

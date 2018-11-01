@@ -11,4 +11,9 @@ class ApplicationController < ActionController::Base
   def rules
   end
 
+  def comments
+  end
+
+  def user_information
+  end
 end
