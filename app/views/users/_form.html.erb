@@ -1,0 +1,25 @@
+<%= form_with(model: user, local: true) do |form| %>
+ 
+  <%= form.label :name %>:
+  <br>
+  <%= form.text_field :name %>
+  <br>
+
+  Email: 
+  <br>
+  <%= form.email_field :email %>
+  <br>
+
+  Password: 
+  <br>
+ <%= form.password_field :password %>
+  <br>
+
+ Confirmation:
+ <br>
+ <%= form.password_field :password_confirmation %>
+  <br>
+ <div class="actions">
+    <%= form.submit class: 'btn btn-light' %>
+  </div>
+<% end %>

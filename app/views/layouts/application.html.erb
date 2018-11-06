@@ -20,8 +20,20 @@
       <nav class="my-2 my-md-0 mr-md-3">
         <span class="p-2 text-dark" ><%= render 'menu'%></span>
       </nav>
-      <a class="btn btn-outline-primary" href="#">Sign up</a>
+      <% if !logged_in? %>
+      <%= link_to 'Sign up', signup_path,{class:" btn btn-outline-primary"}%>
+      <%= link_to "Log In", login_path, {class:" btn btn-outline-primary"} %>
+      <% end %>
+      <div id="user_header">
+  <% if logged_in? %>
+     <%= link_to 'Logout',  logout_path, class:"btn btn-danger", method: :delete%>
+  <% else %>
+     <%= link_to "Sign Up", new_user_path, style: "#{'display:none' if request.fullpath }" %>
+     <%= link_to "Log In", login_path,style: "#{'display:none' if request.fullpath}"%>       
+  <% end %>
     </div>
+    
+</div>
     <div class="container">
     <div class="row">
       <div class="col">
